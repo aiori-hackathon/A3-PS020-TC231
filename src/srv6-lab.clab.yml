@@ -1,0 +1,86 @@
+name: srv6
+
+topology:
+  nodes:
+    r1:
+      kind: linux
+      image: frrouting/frr:latest
+      cmd: sleep infinity
+      exec:
+        - sysctl -w net.ipv6.conf.all.forwarding=1
+        - sysctl -w net.ipv6.conf.all.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth1.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth2.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth3.seg6_enabled=1
+        - ip -6 addr add 2001:db8:a::1/64 dev eth1 nodad
+        - ip -6 addr add 2001:db8:12::1/64 dev eth2 nodad
+        - ip -6 addr add 2001:db8:13::1/64 dev eth3 nodad
+    r2:
+      kind: linux
+      image: frrouting/frr:latest
+      cmd: sleep infinity
+      exec:
+        - sysctl -w net.ipv6.conf.all.forwarding=1
+        - sysctl -w net.ipv6.conf.all.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth1.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth2.seg6_enabled=1
+        - ip -6 addr add 2001:db8:12::2/64 dev eth1 nodad
+        - ip -6 addr add 2001:db8:25::1/64 dev eth2 nodad
+    r3:
+      kind: linux
+      image: frrouting/frr:latest
+      cmd: sleep infinity
+      exec:
+        - sysctl -w net.ipv6.conf.all.forwarding=1
+        - sysctl -w net.ipv6.conf.all.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth1.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth2.seg6_enabled=1
+        - ip -6 addr add 2001:db8:13::2/64 dev eth1 nodad
+        - ip -6 addr add 2001:db8:34::1/64 dev eth2 nodad
+    r4:
+      kind: linux
+      image: frrouting/frr:latest
+      cmd: sleep infinity
+      exec:
+        - sysctl -w net.ipv6.conf.all.forwarding=1
+        - sysctl -w net.ipv6.conf.all.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth1.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth2.seg6_enabled=1
+        - ip -6 addr add 2001:db8:34::2/64 dev eth1 nodad
+        - ip -6 addr add 2001:db8:45::1/64 dev eth2 nodad
+    r5:
+      kind: linux
+      image: frrouting/frr:latest
+      cmd: sleep infinity
+      exec:
+        - sysctl -w net.ipv6.conf.all.forwarding=1
+        - sysctl -w net.ipv6.conf.all.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth1.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth2.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth3.seg6_enabled=1
+        - ip -6 addr add 2001:db8:25::2/64 dev eth1 nodad
+        - ip -6 addr add 2001:db8:45::2/64 dev eth2 nodad
+        - ip -6 addr add 2001:db8:b::1/64 dev eth3 nodad
+    h1:
+      kind: linux
+      image: frrouting/frr:latest
+      cmd: sleep infinity
+      exec:
+        - ip -6 addr add 2001:db8:a::2/64 dev eth1 nodad
+        - ip -6 route replace default via 2001:db8:a::1 dev eth1
+    h2:
+      kind: linux
+      image: frrouting/frr:latest
+      cmd: sleep infinity
+      exec:
+        - ip -6 addr add 2001:db8:b::2/64 dev eth1 nodad
+        - ip -6 route replace default via 2001:db8:b::1 dev eth1
+
+  links:
+    - endpoints: ["h1:eth1", "r1:eth1"]
+    - endpoints: ["r1:eth2", "r2:eth1"]
+    - endpoints: ["r1:eth3", "r3:eth1"]
+    - endpoints: ["r2:eth2", "r5:eth1"]
+    - endpoints: ["r3:eth2", "r4:eth1"]
+    - endpoints: ["r4:eth2", "r5:eth2"]
+    - endpoints: ["r5:eth3", "h2:eth1"]
