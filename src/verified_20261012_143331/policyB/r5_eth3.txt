@@ -1,0 +1,4 @@
+reading from file /tmp/verified_B_r5_eth3.pcap, link-type EN10MB (Ethernet), snapshot length 262144
+14:33:44.357297 IP6 (flowlabel 0x79e2e, hlim 63, next-header ICMPv6 (58) payload length: 64) 2001:db8:a::2 > 2001:db8:b::2: [icmp6 sum ok] ICMP6, echo request, id 577, seq 0
+14:33:45.402862 IP6 (flowlabel 0x79e2e, hlim 63, next-header ICMPv6 (58) payload length: 64) 2001:db8:a::2 > 2001:db8:b::2: [icmp6 sum ok] ICMP6, echo request, id 577, seq 1
+14:33:46.404884 IP6 (flowlabel 0x79e2e, hlim 63, next-header ICMPv6 (58) payload length: 64) 2001:db8:a::2 > 2001:db8:b::2: [icmp6 sum ok] ICMP6, echo request, id 577, seq 2
