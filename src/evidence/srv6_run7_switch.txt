@@ -1,0 +1,13 @@
+RUN 7: SAVED FAILURE AND SWITCH EVIDENCE
+=== POLICY BEFORE FAILURE ===
+2001:db8:b::2  encap seg6 mode encap segs 2 [ fc00:0:2::1 fc00:0:5::d6 ] dev eth2 metric 1024 pref medium
+=== LINK-DOWN COMMAND TIMESTAMPS ===
+t_before_ns=1791810453385326911
+t_after_ns=1791810453386772712
+=== DETECTOR AND SWITCH TIMESTAMPS ===
+t_detect_ns=1791810453391349580
+t_switched_ns=1791810453393115574
+t_first_ok_ns=1791810453393270805
+probes_sent=21968
+=== POLICY AFTER FAILURE ===
+2001:db8:b::2  encap seg6 mode encap segs 3 [ fc00:0:3::1 fc00:0:4::1 fc00:0:5::d6 ] dev eth3 metric 1024 pref medium

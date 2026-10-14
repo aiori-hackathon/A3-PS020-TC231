@@ -1,0 +1,13 @@
+scenario,run,valid,lost_at_cut,interruption_ms,recovery_ms,detection_ms,switch_ms,note
+baseline,6,True,13,13.0,15.165876,,,
+baseline,7,True,13,13.0,14.665655,,,
+baseline,8,True,11,11.0,13.001809,,,
+baseline,9,True,12,12.0,13.220575,,,
+baseline,10,True,11,11.0,12.987278,,,
+srv6,1,True,6,6.0,8.239575,4.419883,1.950111,
+srv6,2,True,5,5.0,7.116517,4.836985,1.436851,
+srv6,3,False,0,0.0,,-1979.401929,4.069476,no loss at the cut; No detection or false trigger before cut
+srv6,4,True,6,6.0,7.471642,4.853767,1.549516,
+srv6,5,True,6,6.0,7.895658,5.022904,1.914213,
+srv6,6,False,0,0.0,,-423.334964,1.632977,no loss at the cut; No detection or false trigger before cut
+srv6,7,True,6,6.0,7.893545,5.299769,1.765994,

@@ -1,0 +1,10 @@
+results/baseline/run6: VALID  lost@cut=13  interruption=13.0 ms (resolution 1.0 ms)  first delivery after cut=15.2 ms  delay spike near cut=2.4 ms
+results/baseline/run7: VALID  lost@cut=13  interruption=13.0 ms (resolution 1.0 ms)  first delivery after cut=14.7 ms  delay spike near cut=0.4 ms
+results/baseline/run8: VALID  lost@cut=11  interruption=11.0 ms (resolution 1.0 ms)  first delivery after cut=13.0 ms  delay spike near cut=0.9 ms
+results/baseline/run9: VALID  lost@cut=12  interruption=12.0 ms (resolution 1.0 ms)  first delivery after cut=13.2 ms  delay spike near cut=3.6 ms
+results/baseline/run10: VALID  lost@cut=11  interruption=11.0 ms (resolution 1.0 ms)  first delivery after cut=13.0 ms  delay spike near cut=0.1 ms
+
+5/5 runs valid
+  packets lost (n=5): mean 12.00  std 1.00  min 11.00  max 13.00
+  interruption ms (n=5): mean 12.00  std 1.00  min 11.00  max 13.00
+  first delivery after cut ms (n=5): mean 13.81  std 1.03  min 12.99  max 15.17

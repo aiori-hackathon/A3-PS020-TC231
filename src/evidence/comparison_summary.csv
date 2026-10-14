@@ -1,0 +1,7 @@
+scenario,metric,n,mean,sample_sd,min,max
+baseline,lost_at_cut,5,12,1.0,11,13
+srv6,lost_at_cut,5,5.8,0.4472135954999579,5,6
+baseline,interruption_ms,5,12.0,1.0,11.0,13.0
+srv6,interruption_ms,5,5.8,0.4472135954999579,5.0,6.0
+baseline,recovery_ms,5,13.8082386,1.0305333214095023,12.987278,15.165876
+srv6,recovery_ms,5,7.7233874,0.4349562724209182,7.116517,8.239575

@@ -1,0 +1,21 @@
+results/srv6/run1: VALID
+   lost@cut=6  interruption=6.0 ms (resolution 1.0 ms)  detection delay=4.4 ms  switch cmd=2.0 ms  first delivery after cut=8.2 ms
+results/srv6/run2: VALID
+   lost@cut=5  interruption=5.0 ms (resolution 1.0 ms)  detection delay=4.8 ms  switch cmd=1.4 ms  first delivery after cut=7.1 ms
+results/srv6/run3: INVALID - probe fired BEFORE the cut (false trigger)
+   lost@cut=0  interruption=0.0 ms (resolution 1.0 ms)  detection delay=-1979.4 ms  switch cmd=4.1 ms  first delivery after cut=n/a
+results/srv6/run4: VALID
+   lost@cut=6  interruption=6.0 ms (resolution 1.0 ms)  detection delay=4.9 ms  switch cmd=1.5 ms  first delivery after cut=7.5 ms
+results/srv6/run5: VALID
+   lost@cut=6  interruption=6.0 ms (resolution 1.0 ms)  detection delay=5.0 ms  switch cmd=1.9 ms  first delivery after cut=7.9 ms
+results/srv6/run6: INVALID - probe fired BEFORE the cut (false trigger)
+   lost@cut=0  interruption=0.0 ms (resolution 1.0 ms)  detection delay=-423.3 ms  switch cmd=1.6 ms  first delivery after cut=n/a
+results/srv6/run7: VALID
+   lost@cut=6  interruption=6.0 ms (resolution 1.0 ms)  detection delay=5.3 ms  switch cmd=1.8 ms  first delivery after cut=7.9 ms
+
+5/7 runs valid
+  packets lost (n=5): mean 5.80  std 0.45  min 5.00  max 6.00
+  interruption ms (n=5): mean 5.80  std 0.45  min 5.00  max 6.00
+  detection delay ms (n=5): mean 4.89  std 0.32  min 4.42  max 5.30
+  switch cmd ms (n=5): mean 1.72  std 0.22  min 1.44  max 1.95
+  first delivery after cut ms (n=5): mean 7.72  std 0.43  min 7.12  max 8.24
