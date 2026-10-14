@@ -1,0 +1,6 @@
+scenario=srv6
+rate=1000
+dur=20
+cut_at=5
+payload=64
+miss_ms=5

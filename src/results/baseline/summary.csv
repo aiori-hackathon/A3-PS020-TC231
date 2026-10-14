@@ -1,0 +1,7 @@
+run,valid,lost_total,lost_at_cut,interruption_ms,recovery_ms,spike_ms,note
+results/baseline/run1,True,13,13,13.0,15.255132,15.3689795,wall-clock run length 21.07s vs dur 20s (clock step; loss counts still fine)
+results/baseline/run6,True,13,13,13.0,15.165876,2.398249,
+results/baseline/run7,True,13,13,13.0,14.665655,0.36081599999999997,
+results/baseline/run8,True,11,11,11.0,13.001809,0.9146654999999999,
+results/baseline/run9,True,12,12,12.0,13.220575,3.604816,
+results/baseline/run10,True,11,11,11.0,12.987278,0.124891,

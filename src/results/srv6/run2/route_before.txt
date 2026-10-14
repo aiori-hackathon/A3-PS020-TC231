@@ -1,0 +1,1 @@
+2001:db8:b::2  encap seg6 mode encap segs 2 [ fc00:0:2::1 fc00:0:5::d6 ] dev eth2 metric 1024 pref medium
