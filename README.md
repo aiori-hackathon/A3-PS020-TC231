@@ -37,3 +37,4 @@ In this testbed, SRv6 with scripted switching recovered faster on average and lo
 - [Prototype presentation](A3-PS020-TC231%20-%20srv6%20path%20steering.pdf) — the initial prototype and its results.
 
 **Team introduction:** https://www.youtube.com/watch?v=MOveHIw-h10
+**Live Demo**https://www.youtube.com/watch?v=OAxIbgI-XLI
