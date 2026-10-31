@@ -1,0 +1,91 @@
+{
+  "schema": "ps020-timed-v3-1",
+  "run": "runfinal_srv6_20261031_142455_026",
+  "mode": "srv6",
+  "functional_pass": true,
+  "performance_pass": false,
+  "errors": [],
+  "quality_reasons": [
+    "send-attempt gap exceeds 2ms in audited window",
+    "send lateness exceeds 2ms in audited window"
+  ],
+  "endpoint": "H2 userspace UDP receive; not wire arrival",
+  "sent": 20000,
+  "received_unique": 19992,
+  "lost_total": 8,
+  "duplicates": 0,
+  "achieved_rate_pps": 999.7921351713679,
+  "max_sender_lateness_ms": 2.111414,
+  "cut": {
+    "clock": "monotonic",
+    "operation": "down",
+    "interface": "eth2",
+    "before_ns": 3248044269427,
+    "submitted_ns": 3248044559304,
+    "after_ns": 3248044612692,
+    "uncertainty_ns": 343265,
+    "status": "acknowledged",
+    "flags_before": 4099,
+    "flags_after": 4098,
+    "requested_at_ns": 3248042609192,
+    "scheduled_cut_lateness_ns": 1660235
+  },
+  "lost_at_cut": 8,
+  "loss_burst_selection": "full sequence bursts overlapping cut start through cut+500ms; not causal attribution",
+  "post_loss_udp_recovery": {
+    "sequence": 5007,
+    "receive_ns": 3248053231474,
+    "from_cut_start_ms": 8.962047,
+    "from_cut_end_ms": 8.618782
+  },
+  "max_receiver_gap_near_cut_ms": 9.329834,
+  "detection_delay_bounds_ms": [
+    6.384957,
+    6.728222
+  ],
+  "detection_breakdown": {
+    "stages_ns": {
+      "last_reply_relative_to_cut": 37117,
+      "configured_miss_wait": 5000000,
+      "miss_polling_overshoot": 401929,
+      "configured_confirmation_wait": 1000000,
+      "confirmation_polling_overshoot": 289176
+    },
+    "total_ns": 6728222,
+    "signed_term": "last_reply_relative_to_cut may be negative; it is an offset, not a negative delay"
+  },
+  "post_policy_delivery_breakdown": {
+    "sequence": 5008,
+    "send_ns": 3248053801208,
+    "receive_ns": 3248053962894,
+    "stages_ns": {
+      "observed_detection": 6728222,
+      "controller_dispatch": 5688,
+      "ip_command_wall_time": 2013032,
+      "wait_for_this_delivered_datagram": 784839,
+      "send_stamp_to_H2_userspace_read": 161686
+    },
+    "total_ns": 9693467,
+    "limitation": "last stage includes send syscall, network, receive queue and receiver scheduling; those cannot be isolated from these observations"
+  },
+  "recovery_breakdown": {
+    "sequence": 5007,
+    "send_ns": 3248052800876,
+    "receive_ns": 3248053231474,
+    "total_ns": 8962047,
+    "stages_ns": {
+      "elapsed_before_detection_or_recovery": 6728222,
+      "dispatch_before_recovery": 5688,
+      "ip_command_overlap_before_recovery": 2013032,
+      "remaining_after_command_return_to_receive": 215105
+    },
+    "command_and_packet_overlap": true,
+    "limitation": "temporal accounting, not isolation of network versus host scheduling; route may activate before ip returns; path attribution requires packet evidence"
+  },
+  "loss_count_times_nominal_interval_is_outage": false,
+  "pacing_window": "cut-100ms to cut+500ms",
+  "near_cut_max_send_gap_ms": 3.110516,
+  "near_cut_max_lateness_ms": 2.111414,
+  "near_cut_max_send_call_ms": 0.378551,
+  "path_attribution_verified": false
+}

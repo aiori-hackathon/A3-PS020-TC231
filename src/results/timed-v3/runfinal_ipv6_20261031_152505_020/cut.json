@@ -1,0 +1,14 @@
+{
+  "clock": "monotonic",
+  "operation": "down",
+  "interface": "eth2",
+  "before_ns": 6496457034312,
+  "submitted_ns": 6496457253263,
+  "after_ns": 6496457304294,
+  "uncertainty_ns": 269982,
+  "status": "acknowledged",
+  "flags_before": 4099,
+  "flags_after": 4098,
+  "requested_at_ns": 6496451857960,
+  "scheduled_cut_lateness_ns": 5176352
+}

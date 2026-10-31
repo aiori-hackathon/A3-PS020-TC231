@@ -1,0 +1,17 @@
+{
+  "schema": "ps020-timed-v3-1",
+  "mode": "srv6",
+  "rate": 1000,
+  "duration": 20,
+  "payload": 64,
+  "cut_at": 5,
+  "miss_ms": 5.0,
+  "confirm_ms": 1.0,
+  "sender_cpu": null,
+  "realtime": false,
+  "capture": false,
+  "port": 24463,
+  "helper_sha256": "0a653bc457f77312c6c92fe21c8bffd8805c0a880abd99792a063e452c5e1f90",
+  "pacing_gap_limit_ms": 2,
+  "pacing_rate_tolerance_percent": 2
+}

@@ -1,30 +1,35 @@
-# AIORI-3-HACKATHON-PROJECTS
-This repository will contain the code and resources for the AIORI-3 hackathon that will be developed during the AIORI-3
-
 # SRv6 Path Steering and Measured Failure Recovery
 
-# Team Details
-Team Name:Team Sage  
-Team Code: A3-PS020-TC231  
-Team Members: Abhinav, Rajat  
-Mentor: Chaitra Ma'am  
+**Team Sage · A3-PS020-TC231 · Abhinav G and Rajat R Pai · Mentor: Chaitra Ma’am**
 
-# About the Project
-This repository contains our prototype and experimental work on **SRv6 Path Steering and Measured Failure Recovery**.
+We use a five-router containerlab network to compare IPv6/OSPFv3 forwarding with SRv6 path steering during a controlled R2–R5 link failure. A probe-based controller on R1 switches traffic to the backup SRv6 policy and restores the primary policy after the link returns.
 
-The project implements a virtual IPv6 network and evaluates network behaviour under a controlled link-failure scenario. We compare **normal IPv6 routing with SRv6-based path steering**, focusing on the differences observed during failure and recovery.
+- **Primary path A:** R1 → R2 → R5; SIDs `fc00:0:2::1, fc00:0:5::d6`.
+- **Backup path B:** R1 → R3 → R4 → R5; SIDs `fc00:0:3::1, fc00:0:4::1, fc00:0:5::d6`.
+- A separate captured trial shows SID progression, delivery on the backup path and restoration of the primary path.
 
-The repository includes the implementation, experiment scripts, collected evidence, results, and project presentation. For a detailed explanation of the topology, methodology, measurements, and observations, refer to the presentation included in the repository.
+## Results
 
-# Team Introduction Video
-https://www.youtube.com/watch?v=MOveHIw-h10
+Each campaign contained 50 trials with UDP traffic at 1,000 packets per second. All 100 trials passed the functional checks. The table shows the means for measurements that met the quality checks.
 
+| Metric | IPv6/OSPFv3 | SRv6 |
+|---|---:|---:|
+| Functional passes | 50 / 50 | 50 / 50 |
+| Accepted measurements | 47 / 50 | 46 / 50 |
+| Packets lost at the cut | 12.49 | 7.26 |
+| Maximum receiver gap | 13.71 ms | 8.40 ms |
+| Post-loss UDP recovery from cut request | 13.42 ms | 8.04 ms |
 
-# Repository Contents
-- Source code and network configuration
-- Experiment and measurement scripts
-- Experimental results and supporting evidence
-- Project presentation
-- Project documentation
+In this testbed, SRv6 recovered faster on average and lost fewer packets than the IPv6/OSPFv3 baseline. Recovery is measured at H2 from the start of the link-down request. The SRv6 failover uses scripted ingress policy switching.
 
----
+## Setup, demo and evidence
+
+- [SETUP_AND_DEMO.md](SETUP_AND_DEMO.md) — prerequisites, lab setup, a captured demonstration and test commands.
+- [START_HERE.md](START_HERE.md) — entry point for running the project.
+- `src/run_timed.py` — runs controls, SRv6 trials and IPv6 baseline trials.
+- `src/batches/` — summaries for the two 50-trial campaigns.
+- `src/results/timed-v3/` — individual campaign results.
+- `src/evidence/sid_validation_20261031/` — packet captures and report for the SID traversal demonstration.
+- `A3-PS020-TC231 - srv6 path steering.pdf` — presentation summarising the initial prototype.
+
+Team introduction: https://www.youtube.com/watch?v=MOveHIw-h10

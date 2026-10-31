@@ -1,0 +1,317 @@
+{
+  "attempted": 50,
+  "functional_pass": 50,
+  "performance_pass": 46,
+  "invalid": [
+    {
+      "run": "runfinal_srv6_20261031_142455_025",
+      "errors": [],
+      "pacing": [
+        "additional packet loss outside cut-overlapping bursts"
+      ]
+    },
+    {
+      "run": "runfinal_srv6_20261031_142455_026",
+      "errors": [],
+      "pacing": [
+        "send-attempt gap exceeds 2ms in audited window",
+        "send lateness exceeds 2ms in audited window"
+      ]
+    },
+    {
+      "run": "runfinal_srv6_20261031_142455_032",
+      "errors": [],
+      "pacing": [
+        "additional packet loss outside cut-overlapping bursts"
+      ]
+    },
+    {
+      "run": "runfinal_srv6_20261031_142455_049",
+      "errors": [],
+      "pacing": [
+        "send-attempt gap exceeds 2ms in audited window",
+        "send lateness exceeds 2ms in audited window"
+      ]
+    }
+  ],
+  "pacing_clean": {
+    "lost_at_cut": {
+      "n": 46,
+      "mean": 7.260869565217392,
+      "min": 6,
+      "max": 9
+    },
+    "max_receiver_gap_near_cut_ms": {
+      "n": 46,
+      "mean": 8.395753260869565,
+      "min": 7.05836,
+      "max": 10.120166
+    },
+    "post_loss_udp_recovery_from_cut_start_ms": {
+      "n": 46,
+      "mean": 8.03784847826087,
+      "min": 6.654442,
+      "max": 9.728165
+    },
+    "detection_breakdown": {
+      "configured_confirmation_wait": {
+        "n": 46,
+        "mean_ms": 1.0,
+        "min_ms": 1.0,
+        "max_ms": 1.0
+      },
+      "configured_miss_wait": {
+        "n": 46,
+        "mean_ms": 5.0,
+        "min_ms": 5.0,
+        "max_ms": 5.0
+      },
+      "confirmation_polling_overshoot": {
+        "n": 46,
+        "mean_ms": 0.3461858260869565,
+        "min_ms": 0.001074,
+        "max_ms": 0.805908
+      },
+      "last_reply_relative_to_cut": {
+        "n": 46,
+        "mean_ms": -0.453833652173913,
+        "min_ms": -1.26768,
+        "max_ms": 0.14544
+      },
+      "miss_polling_overshoot": {
+        "n": 46,
+        "mean_ms": 0.22972117391304347,
+        "min_ms": 0.002496,
+        "max_ms": 0.519778
+      }
+    },
+    "recovery_breakdown": {
+      "controller_dispatch": {
+        "n": 13,
+        "mean_ms": 0.007874384615384615,
+        "min_ms": 0.004987,
+        "max_ms": 0.010124
+      },
+      "dispatch_before_recovery": {
+        "n": 33,
+        "mean_ms": 0.0068941212121212125,
+        "min_ms": 0.004459,
+        "max_ms": 0.014823
+      },
+      "elapsed_before_detection_or_recovery": {
+        "n": 33,
+        "mean_ms": 6.059832848484849,
+        "min_ms": 5.253403,
+        "max_ms": 6.78073
+      },
+      "ip_command_overlap_before_recovery": {
+        "n": 33,
+        "mean_ms": 1.6977969696969697,
+        "min_ms": 1.266663,
+        "max_ms": 2.659018
+      },
+      "ip_command_wall_time": {
+        "n": 13,
+        "mean_ms": 1.851553,
+        "min_ms": 1.347408,
+        "max_ms": 2.176325
+      },
+      "observed_detection": {
+        "n": 13,
+        "mean_ms": 6.280068461538462,
+        "min_ms": 5.069679,
+        "max_ms": 7.117438
+      },
+      "remaining_after_command_return_to_receive": {
+        "n": 33,
+        "mean_ms": 0.06729760606060606,
+        "min_ms": 0.0,
+        "max_ms": 0.973271
+      },
+      "send_stamp_to_H2_userspace_read": {
+        "n": 13,
+        "mean_ms": 0.2370876153846154,
+        "min_ms": 0.15757,
+        "max_ms": 0.507984
+      },
+      "wait_until_recovery_packet_send": {
+        "n": 13,
+        "mean_ms": 0.18425646153846154,
+        "min_ms": 0.004604,
+        "max_ms": 0.472415
+      }
+    },
+    "post_policy_delivery_breakdown": {
+      "controller_dispatch": {
+        "n": 46,
+        "mean_ms": 0.007171152173913044,
+        "min_ms": 0.004459,
+        "max_ms": 0.014823
+      },
+      "ip_command_wall_time": {
+        "n": 46,
+        "mean_ms": 2.005542304347826,
+        "min_ms": 1.347408,
+        "max_ms": 4.153571
+      },
+      "observed_detection": {
+        "n": 46,
+        "mean_ms": 6.122073347826087,
+        "min_ms": 5.069679,
+        "max_ms": 7.117438
+      },
+      "send_stamp_to_H2_userspace_read": {
+        "n": 46,
+        "mean_ms": 0.21637480434782608,
+        "min_ms": 0.115478,
+        "max_ms": 0.712516
+      },
+      "wait_for_this_delivered_datagram": {
+        "n": 46,
+        "mean_ms": 0.5125958260869565,
+        "min_ms": 0.004604,
+        "max_ms": 1.356124
+      }
+    }
+  },
+  "all_functional_sensitivity": {
+    "lost_at_cut": {
+      "n": 50,
+      "mean": 7.26,
+      "min": 6,
+      "max": 9
+    },
+    "max_receiver_gap_near_cut_ms": {
+      "n": 50,
+      "mean": 8.3921032,
+      "min": 7.05836,
+      "max": 10.120166
+    },
+    "post_loss_udp_recovery_from_cut_start_ms": {
+      "n": 50,
+      "mean": 8.03200692,
+      "min": 6.654442,
+      "max": 9.728165
+    },
+    "detection_breakdown": {
+      "configured_confirmation_wait": {
+        "n": 50,
+        "mean_ms": 1.0,
+        "min_ms": 1.0,
+        "max_ms": 1.0
+      },
+      "configured_miss_wait": {
+        "n": 50,
+        "mean_ms": 5.0,
+        "min_ms": 5.0,
+        "max_ms": 5.0
+      },
+      "confirmation_polling_overshoot": {
+        "n": 50,
+        "mean_ms": 0.34109118,
+        "min_ms": 0.001074,
+        "max_ms": 0.805908
+      },
+      "last_reply_relative_to_cut": {
+        "n": 50,
+        "mean_ms": -0.45059326,
+        "min_ms": -1.26768,
+        "max_ms": 0.14544
+      },
+      "miss_polling_overshoot": {
+        "n": 50,
+        "mean_ms": 0.23057974,
+        "min_ms": 0.002496,
+        "max_ms": 0.519778
+      }
+    },
+    "recovery_breakdown": {
+      "controller_dispatch": {
+        "n": 13,
+        "mean_ms": 0.007874384615384615,
+        "min_ms": 0.004987,
+        "max_ms": 0.010124
+      },
+      "dispatch_before_recovery": {
+        "n": 37,
+        "mean_ms": 0.006846783783783784,
+        "min_ms": 0.004459,
+        "max_ms": 0.014823
+      },
+      "elapsed_before_detection_or_recovery": {
+        "n": 37,
+        "mean_ms": 6.065216027027027,
+        "min_ms": 5.253403,
+        "max_ms": 6.78073
+      },
+      "ip_command_overlap_before_recovery": {
+        "n": 37,
+        "mean_ms": 1.7038722702702702,
+        "min_ms": 1.266663,
+        "max_ms": 2.659018
+      },
+      "ip_command_wall_time": {
+        "n": 13,
+        "mean_ms": 1.851553,
+        "min_ms": 1.347408,
+        "max_ms": 2.176325
+      },
+      "observed_detection": {
+        "n": 13,
+        "mean_ms": 6.280068461538462,
+        "min_ms": 5.069679,
+        "max_ms": 7.117438
+      },
+      "remaining_after_command_return_to_receive": {
+        "n": 37,
+        "mean_ms": 0.07026564864864865,
+        "min_ms": 0.0,
+        "max_ms": 0.973271
+      },
+      "send_stamp_to_H2_userspace_read": {
+        "n": 13,
+        "mean_ms": 0.2370876153846154,
+        "min_ms": 0.15757,
+        "max_ms": 0.507984
+      },
+      "wait_until_recovery_packet_send": {
+        "n": 13,
+        "mean_ms": 0.18425646153846154,
+        "min_ms": 0.004604,
+        "max_ms": 0.472415
+      }
+    },
+    "post_policy_delivery_breakdown": {
+      "controller_dispatch": {
+        "n": 50,
+        "mean_ms": 0.00711396,
+        "min_ms": 0.004459,
+        "max_ms": 0.014823
+      },
+      "ip_command_wall_time": {
+        "n": 50,
+        "mean_ms": 1.99085164,
+        "min_ms": 1.347408,
+        "max_ms": 4.153571
+      },
+      "observed_detection": {
+        "n": 50,
+        "mean_ms": 6.12107766,
+        "min_ms": 5.069679,
+        "max_ms": 7.117438
+      },
+      "send_stamp_to_H2_userspace_read": {
+        "n": 50,
+        "mean_ms": 0.21171606,
+        "min_ms": 0.115478,
+        "max_ms": 0.712516
+      },
+      "wait_for_this_delivered_datagram": {
+        "n": 50,
+        "mean_ms": 0.53254862,
+        "min_ms": 0.004604,
+        "max_ms": 1.356124
+      }
+    }
+  }
+}

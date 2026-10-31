@@ -1,0 +1,36 @@
+runfinal_srv6_20261031_142455_031: functional=PASS; measurement=ACCEPTED
+sent: 20000
+received_unique: 19991
+lost_total: 9
+lost_at_cut: 9
+duplicates: 0
+achieved_rate_pps: 1000.0025407334916
+near_cut_max_send_gap_ms: 1.62662
+near_cut_max_send_call_ms: 0.493015
+max_receiver_gap_near_cut_ms: 10.120166
+cut transition uncertainty: 0.232459 ms (ACK bracket, no midpoint assumption)
+post-loss UDP recovery relative to physical-cut bounds: [9.495706, 9.728165] ms
+detection_breakdown:
+  last_reply_relative_to_cut: -0.081567 ms
+  configured_miss_wait: 5.000000 ms
+  miss_polling_overshoot: 0.393097 ms
+  configured_confirmation_wait: 1.000000 ms
+  confirmation_polling_overshoot: 0.805908 ms
+  exact sum: 7.117438 ms
+recovery_breakdown:
+  observed_detection: 7.117438 ms
+  controller_dispatch: 0.010124 ms
+  ip_command_wall_time: 2.176325 ms
+  wait_until_recovery_packet_send: 0.209251 ms
+  send_stamp_to_H2_userspace_read: 0.215027 ms
+  exact sum: 9.728165 ms
+  temporal accounting, not isolation of network versus host scheduling; route may activate before ip returns; path attribution requires packet evidence
+post_policy_delivery_breakdown:
+  observed_detection: 7.117438 ms
+  controller_dispatch: 0.010124 ms
+  ip_command_wall_time: 2.176325 ms
+  wait_for_this_delivered_datagram: 0.209251 ms
+  send_stamp_to_H2_userspace_read: 0.215027 ms
+  exact sum: 9.728165 ms
+  last stage includes send syscall, network, receive queue and receiver scheduling; those cannot be isolated from these observations
+SID/path attribution not verified in this run; use --capture on the failure pilot.

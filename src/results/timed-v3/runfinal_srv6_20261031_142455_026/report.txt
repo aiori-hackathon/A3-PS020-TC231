@@ -1,0 +1,37 @@
+runfinal_srv6_20261031_142455_026: functional=PASS; measurement=NOT ACCEPTED
+QUALITY: send-attempt gap exceeds 2ms in audited window
+QUALITY: send lateness exceeds 2ms in audited window
+sent: 20000
+received_unique: 19992
+lost_total: 8
+lost_at_cut: 8
+duplicates: 0
+achieved_rate_pps: 999.7921351713679
+near_cut_max_send_gap_ms: 3.110516
+near_cut_max_send_call_ms: 0.378551
+max_receiver_gap_near_cut_ms: 9.329834
+cut transition uncertainty: 0.343265 ms (ACK bracket, no midpoint assumption)
+post-loss UDP recovery relative to physical-cut bounds: [8.618782, 8.962047] ms
+detection_breakdown:
+  last_reply_relative_to_cut: 0.037117 ms
+  configured_miss_wait: 5.000000 ms
+  miss_polling_overshoot: 0.401929 ms
+  configured_confirmation_wait: 1.000000 ms
+  confirmation_polling_overshoot: 0.289176 ms
+  exact sum: 6.728222 ms
+recovery_breakdown:
+  elapsed_before_detection_or_recovery: 6.728222 ms
+  dispatch_before_recovery: 0.005688 ms
+  ip_command_overlap_before_recovery: 2.013032 ms
+  remaining_after_command_return_to_receive: 0.215105 ms
+  exact sum: 8.962047 ms
+  temporal accounting, not isolation of network versus host scheduling; route may activate before ip returns; path attribution requires packet evidence
+post_policy_delivery_breakdown:
+  observed_detection: 6.728222 ms
+  controller_dispatch: 0.005688 ms
+  ip_command_wall_time: 2.013032 ms
+  wait_for_this_delivered_datagram: 0.784839 ms
+  send_stamp_to_H2_userspace_read: 0.161686 ms
+  exact sum: 9.693467 ms
+  last stage includes send syscall, network, receive queue and receiver scheduling; those cannot be isolated from these observations
+SID/path attribution not verified in this run; use --capture on the failure pilot.

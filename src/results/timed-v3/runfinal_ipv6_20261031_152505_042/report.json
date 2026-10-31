@@ -1,0 +1,47 @@
+{
+  "schema": "ps020-timed-v3-1",
+  "run": "runfinal_ipv6_20261031_152505_042",
+  "mode": "baseline",
+  "functional_pass": true,
+  "performance_pass": false,
+  "errors": [],
+  "quality_reasons": [
+    "send-attempt gap exceeds 2ms in audited window"
+  ],
+  "endpoint": "H2 userspace UDP receive; not wire arrival",
+  "sent": 20000,
+  "received_unique": 19987,
+  "lost_total": 13,
+  "duplicates": 0,
+  "achieved_rate_pps": 999.9562419268534,
+  "max_sender_lateness_ms": 1.162288,
+  "cut": {
+    "clock": "monotonic",
+    "operation": "down",
+    "interface": "eth2",
+    "before_ns": 7762666979078,
+    "submitted_ns": 7762667154686,
+    "after_ns": 7762667205857,
+    "uncertainty_ns": 226779,
+    "status": "acknowledged",
+    "flags_before": 4099,
+    "flags_after": 4098,
+    "requested_at_ns": 7762661700015,
+    "scheduled_cut_lateness_ns": 5279063
+  },
+  "lost_at_cut": 13,
+  "loss_burst_selection": "full sequence bursts overlapping cut start through cut+500ms; not causal attribution",
+  "post_loss_udp_recovery": {
+    "sequence": 5019,
+    "receive_ns": 7762681033501,
+    "from_cut_start_ms": 14.054423,
+    "from_cut_end_ms": 13.827644
+  },
+  "max_receiver_gap_near_cut_ms": 14.209647,
+  "loss_count_times_nominal_interval_is_outage": false,
+  "pacing_window": "cut-100ms to cut+500ms",
+  "near_cut_max_send_gap_ms": 2.161433,
+  "near_cut_max_lateness_ms": 1.162288,
+  "near_cut_max_send_call_ms": 0.242678,
+  "path_attribution_verified": false
+}

@@ -1,0 +1,1 @@
+2001:db8:b::2 from :: via fe80::a8c1:abff:feaa:97d6 dev eth2 proto ospf src 2001:db8:12::1 metric 20 pref medium

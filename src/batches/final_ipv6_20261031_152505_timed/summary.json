@@ -1,0 +1,69 @@
+{
+  "attempted": 50,
+  "functional_pass": 50,
+  "performance_pass": 47,
+  "invalid": [
+    {
+      "run": "runfinal_ipv6_20261031_152505_007",
+      "errors": [],
+      "pacing": [
+        "send-attempt gap exceeds 2ms in audited window",
+        "send lateness exceeds 2ms in audited window"
+      ]
+    },
+    {
+      "run": "runfinal_ipv6_20261031_152505_015",
+      "errors": [],
+      "pacing": [
+        "send-attempt gap exceeds 2ms in audited window"
+      ]
+    },
+    {
+      "run": "runfinal_ipv6_20261031_152505_042",
+      "errors": [],
+      "pacing": [
+        "send-attempt gap exceeds 2ms in audited window"
+      ]
+    }
+  ],
+  "pacing_clean": {
+    "lost_at_cut": {
+      "n": 47,
+      "mean": 12.48936170212766,
+      "min": 11,
+      "max": 14
+    },
+    "max_receiver_gap_near_cut_ms": {
+      "n": 47,
+      "mean": 13.709045361702128,
+      "min": 12.067771,
+      "max": 15.086834
+    },
+    "post_loss_udp_recovery_from_cut_start_ms": {
+      "n": 47,
+      "mean": 13.415581404255319,
+      "min": 12.151636,
+      "max": 14.900833
+    }
+  },
+  "all_functional_sensitivity": {
+    "lost_at_cut": {
+      "n": 50,
+      "mean": 12.56,
+      "min": 11,
+      "max": 15
+    },
+    "max_receiver_gap_near_cut_ms": {
+      "n": 50,
+      "mean": 13.775511680000001,
+      "min": 12.067771,
+      "max": 16.123477
+    },
+    "post_loss_udp_recovery_from_cut_start_ms": {
+      "n": 50,
+      "mean": 13.48373632,
+      "min": 12.151636,
+      "max": 16.095491
+    }
+  }
+}

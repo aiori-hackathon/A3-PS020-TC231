@@ -1,0 +1,1 @@
+44 existing timed tests pass after updating capture fixtures to R5 eth1 and the sender mock for diagnostic fields/metadata. Fake-socket 20-packet check confirms exact wall-gap deltas and excluded first row. Syntax checked. No live WSL/Docker testing. Instrumented runs are diagnostic.

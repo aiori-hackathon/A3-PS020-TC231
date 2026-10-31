@@ -1,0 +1,8 @@
+event,monotonic_ns,relative_to_cut_request_ms
+cut_request_start,4468278581542,0.0
+cut_ack_observed,4468278844866,0.263324
+failure_detected,4468285108905,6.527363
+policy_command_start,4468285115066,6.533524
+policy_command_done,4468286906956,8.325414
+endpoint_packet_send_stamp,4468286911560,8.330018
+endpoint_H2_userspace_receive,4468287254641,8.673099

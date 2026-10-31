@@ -1,0 +1,202 @@
+{
+  "schema": "ps020-timed-v3-1",
+  "run": "runsid_validation_20261031_140744_001",
+  "mode": "srv6",
+  "functional_pass": true,
+  "performance_pass": true,
+  "errors": [],
+  "quality_reasons": [],
+  "endpoint": "H2 userspace UDP receive; not wire arrival",
+  "sent": 20000,
+  "received_unique": 19993,
+  "lost_total": 7,
+  "duplicates": 0,
+  "achieved_rate_pps": 999.871808624745,
+  "max_sender_lateness_ms": 1.609688,
+  "cut": {
+    "clock": "monotonic",
+    "operation": "down",
+    "interface": "eth2",
+    "before_ns": 763691814567,
+    "submitted_ns": 763692392167,
+    "after_ns": 763692438878,
+    "uncertainty_ns": 624311,
+    "status": "acknowledged",
+    "flags_before": 4099,
+    "flags_after": 4098,
+    "requested_at_ns": 763686380791,
+    "scheduled_cut_lateness_ns": 5433776
+  },
+  "lost_at_cut": 7,
+  "loss_burst_selection": "full sequence bursts overlapping cut start through cut+500ms; not causal attribution",
+  "post_loss_udp_recovery": {
+    "sequence": 5013,
+    "receive_ns": 763699547477,
+    "from_cut_start_ms": 7.73291,
+    "from_cut_end_ms": 7.108599
+  },
+  "max_receiver_gap_near_cut_ms": 8.036373,
+  "detection_delay_bounds_ms": [
+    5.719856,
+    6.344167
+  ],
+  "detection_breakdown": {
+    "stages_ns": {
+      "last_reply_relative_to_cut": -356505,
+      "configured_miss_wait": 5000000,
+      "miss_polling_overshoot": 263010,
+      "configured_confirmation_wait": 1000000,
+      "confirmation_polling_overshoot": 437662
+    },
+    "total_ns": 6344167,
+    "signed_term": "last_reply_relative_to_cut may be negative; it is an offset, not a negative delay"
+  },
+  "post_policy_delivery_breakdown": {
+    "sequence": 5014,
+    "send_ns": 763700381405,
+    "receive_ns": 763700740098,
+    "stages_ns": {
+      "observed_detection": 6344167,
+      "controller_dispatch": 6682,
+      "ip_command_wall_time": 1692687,
+      "wait_for_this_delivered_datagram": 523302,
+      "send_stamp_to_H2_userspace_read": 358693
+    },
+    "total_ns": 8925531,
+    "limitation": "last stage includes send syscall, network, receive queue and receiver scheduling; those cannot be isolated from these observations"
+  },
+  "recovery_breakdown": {
+    "sequence": 5013,
+    "send_ns": 763699381121,
+    "receive_ns": 763699547477,
+    "total_ns": 7732910,
+    "stages_ns": {
+      "elapsed_before_detection_or_recovery": 6344167,
+      "dispatch_before_recovery": 6682,
+      "ip_command_overlap_before_recovery": 1382061,
+      "remaining_after_command_return_to_receive": 0
+    },
+    "command_and_packet_overlap": true,
+    "limitation": "temporal accounting, not isolation of network versus host scheduling; route may activate before ip returns; path attribution requires packet evidence"
+  },
+  "loss_count_times_nominal_interval_is_outage": false,
+  "pacing_window": "cut-100ms to cut+500ms",
+  "near_cut_max_send_gap_ms": 1.24099,
+  "near_cut_max_lateness_ms": 0.24169,
+  "near_cut_max_send_call_ms": 0.309777,
+  "packet_path_evidence": {
+    "verified": true,
+    "checks": {
+      "primary_ingress": {
+        "samples": 5006,
+        "overhead_bytes": [
+          80
+        ],
+        "sids_wire": [
+          "fc00:0:5::d6",
+          "fc00:0:2::1"
+        ],
+        "segments_left": 1
+      },
+      "primary_after_R2": {
+        "samples": 5006,
+        "overhead_bytes": [
+          80
+        ],
+        "sids_wire": [
+          "fc00:0:5::d6",
+          "fc00:0:2::1"
+        ],
+        "segments_left": 0
+      },
+      "backup_ingress": {
+        "samples": 14986,
+        "overhead_bytes": [
+          96
+        ],
+        "sids_wire": [
+          "fc00:0:5::d6",
+          "fc00:0:4::1",
+          "fc00:0:3::1"
+        ],
+        "segments_left": 2
+      },
+      "backup_after_R3": {
+        "samples": 14986,
+        "overhead_bytes": [
+          96
+        ],
+        "sids_wire": [
+          "fc00:0:5::d6",
+          "fc00:0:4::1",
+          "fc00:0:3::1"
+        ],
+        "segments_left": 1
+      },
+      "backup_after_R4": {
+        "samples": 14986,
+        "overhead_bytes": [
+          96
+        ],
+        "sids_wire": [
+          "fc00:0:5::d6",
+          "fc00:0:4::1",
+          "fc00:0:3::1"
+        ],
+        "segments_left": 0
+      },
+      "restored_ingress": {
+        "samples": 100,
+        "overhead_bytes": [
+          80
+        ],
+        "sids_wire": [
+          "fc00:0:5::d6",
+          "fc00:0:2::1"
+        ],
+        "segments_left": 1
+      },
+      "restored_after_R2": {
+        "samples": 100,
+        "overhead_bytes": [
+          80
+        ],
+        "sids_wire": [
+          "fc00:0:5::d6",
+          "fc00:0:2::1"
+        ],
+        "segments_left": 0
+      },
+      "decapsulated_H2_link": {
+        "samples": 19993
+      },
+      "restored_H2_link": {
+        "samples": 100
+      },
+      "timeline_endpoint_on_backup": {
+        "samples": 1,
+        "sequence": 5014,
+        "interfaces": {
+          "r1_eth3": true,
+          "r3_eth2": true,
+          "r4_eth2": true,
+          "r5_eth3": true
+        }
+      }
+    },
+    "timestamp_method": "inner monotonic packet stamps; pcap epoch timestamps not used for recovery"
+  },
+  "actual_recovery_packet_path": {
+    "all_backup_hops_seen": true,
+    "ingress_policy": "B",
+    "sequence": 5013,
+    "seen_interfaces": [
+      "r1_eth3",
+      "r3_eth2",
+      "r4_eth2",
+      "r5_eth3"
+    ],
+    "limitation": "an A packet may be rerouted by the OSPF underlay; it does not prove ingress backup switching caused recovery"
+  },
+  "path_attribution_verified": true
+}

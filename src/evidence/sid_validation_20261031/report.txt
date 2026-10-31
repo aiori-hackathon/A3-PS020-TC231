@@ -1,0 +1,36 @@
+runsid_validation_20261031_140744_001: functional=PASS; measurement=ACCEPTED
+sent: 20000
+received_unique: 19993
+lost_total: 7
+lost_at_cut: 7
+duplicates: 0
+achieved_rate_pps: 999.871808624745
+near_cut_max_send_gap_ms: 1.24099
+near_cut_max_send_call_ms: 0.309777
+max_receiver_gap_near_cut_ms: 8.036373
+cut transition uncertainty: 0.624311 ms (ACK bracket, no midpoint assumption)
+post-loss UDP recovery relative to physical-cut bounds: [7.108599, 7.73291] ms
+detection_breakdown:
+  last_reply_relative_to_cut: -0.356505 ms
+  configured_miss_wait: 5.000000 ms
+  miss_polling_overshoot: 0.263010 ms
+  configured_confirmation_wait: 1.000000 ms
+  confirmation_polling_overshoot: 0.437662 ms
+  exact sum: 6.344167 ms
+recovery_breakdown:
+  elapsed_before_detection_or_recovery: 6.344167 ms
+  dispatch_before_recovery: 0.006682 ms
+  ip_command_overlap_before_recovery: 1.382061 ms
+  remaining_after_command_return_to_receive: 0.000000 ms
+  exact sum: 7.732910 ms
+  temporal accounting, not isolation of network versus host scheduling; route may activate before ip returns; path attribution requires packet evidence
+post_policy_delivery_breakdown:
+  observed_detection: 6.344167 ms
+  controller_dispatch: 0.006682 ms
+  ip_command_wall_time: 1.692687 ms
+  wait_for_this_delivered_datagram: 0.523302 ms
+  send_stamp_to_H2_userspace_read: 0.358693 ms
+  exact sum: 8.925531 ms
+  last stage includes send syscall, network, receive queue and receiver scheduling; those cannot be isolated from these observations
+Actual UDP recovery packet ingress policy: B
+SRH/packet path verification: PASS

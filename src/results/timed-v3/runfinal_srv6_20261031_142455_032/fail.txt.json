@@ -1,0 +1,25 @@
+{
+  "clock": "monotonic",
+  "status": "finished",
+  "start_ns": 3590840268446,
+  "end_ns": 3616840802426,
+  "detect_ns": 3596862510276,
+  "policy_ack_observed_ns": 3596864165365,
+  "first_probe_ok_ns": 3596864941127,
+  "switch_count": 1,
+  "miss_ms": 5.0,
+  "confirm_ms": 1.0,
+  "trigger": {
+    "last_reply_ns": 3596855931638,
+    "miss_due_ns": 3596860931638,
+    "suspect_ns": 3596861180395,
+    "confirm_due_ns": 3596862180395
+  },
+  "policy_command": {
+    "before_ns": 3596862516118,
+    "after_ns": 3596864165365
+  },
+  "max_loop_gap_ns": 3610347,
+  "error": "",
+  "policy_ack_meaning": "ip process success observed; not exact kernel route activation time"
+}

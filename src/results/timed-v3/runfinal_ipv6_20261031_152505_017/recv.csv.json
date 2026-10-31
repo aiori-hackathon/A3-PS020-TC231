@@ -1,0 +1,10 @@
+{
+  "clock": "monotonic",
+  "start_ns": 6318526711415,
+  "end_ns": 6346578733464,
+  "received": 19988,
+  "ignored": 0,
+  "overflow": false,
+  "receive_buffer_bytes": 8388608,
+  "stamp_meaning": "H2 userspace recvfrom return, not NIC arrival"
+}

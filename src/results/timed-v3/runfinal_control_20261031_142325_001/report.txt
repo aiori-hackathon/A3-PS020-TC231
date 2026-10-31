@@ -1,0 +1,11 @@
+runfinal_control_20261031_142325_001: functional=PASS; measurement=NOT ACCEPTED
+QUALITY: send-attempt gap exceeds 2ms in audited window
+QUALITY: send lateness exceeds 2ms in audited window
+sent: 20000
+received_unique: 20000
+lost_total: 0
+duplicates: 0
+achieved_rate_pps: 999.8249562419613
+near_cut_max_send_gap_ms: 4.231056
+near_cut_max_send_call_ms: 0.723517
+SID/path attribution not verified in this run; use --capture on the failure pilot.

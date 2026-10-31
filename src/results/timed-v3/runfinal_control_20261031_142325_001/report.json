@@ -1,0 +1,24 @@
+{
+  "schema": "ps020-timed-v3-1",
+  "run": "runfinal_control_20261031_142325_001",
+  "mode": "control",
+  "functional_pass": true,
+  "performance_pass": false,
+  "errors": [],
+  "quality_reasons": [
+    "send-attempt gap exceeds 2ms in audited window",
+    "send lateness exceeds 2ms in audited window"
+  ],
+  "endpoint": "H2 userspace UDP receive; not wire arrival",
+  "sent": 20000,
+  "received_unique": 20000,
+  "lost_total": 0,
+  "duplicates": 0,
+  "achieved_rate_pps": 999.8249562419613,
+  "max_sender_lateness_ms": 3.231841,
+  "pacing_window": "whole stream",
+  "near_cut_max_send_gap_ms": 4.231056,
+  "near_cut_max_lateness_ms": 3.231841,
+  "near_cut_max_send_call_ms": 0.723517,
+  "path_attribution_verified": false
+}

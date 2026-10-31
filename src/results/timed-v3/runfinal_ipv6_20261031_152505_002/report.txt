@@ -1,0 +1,13 @@
+runfinal_ipv6_20261031_152505_002: functional=PASS; measurement=ACCEPTED
+sent: 20000
+received_unique: 19987
+lost_total: 13
+lost_at_cut: 13
+duplicates: 0
+achieved_rate_pps: 1000.0044957449978
+near_cut_max_send_gap_ms: 1.406368
+near_cut_max_send_call_ms: 0.847798
+max_receiver_gap_near_cut_ms: 14.100213
+cut transition uncertainty: 0.235895 ms (ACK bracket, no midpoint assumption)
+post-loss UDP recovery relative to physical-cut bounds: [13.447261, 13.683156] ms
+SID/path attribution not verified in this run; use --capture on the failure pilot.

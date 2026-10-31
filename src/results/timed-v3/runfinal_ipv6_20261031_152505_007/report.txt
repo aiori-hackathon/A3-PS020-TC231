@@ -1,0 +1,15 @@
+runfinal_ipv6_20261031_152505_007: functional=PASS; measurement=NOT ACCEPTED
+QUALITY: send-attempt gap exceeds 2ms in audited window
+QUALITY: send lateness exceeds 2ms in audited window
+sent: 20000
+received_unique: 19985
+lost_total: 15
+lost_at_cut: 15
+duplicates: 0
+achieved_rate_pps: 999.0928035516913
+near_cut_max_send_gap_ms: 3.811809
+near_cut_max_send_call_ms: 1.5988
+max_receiver_gap_near_cut_ms: 16.123477
+cut transition uncertainty: 0.564864 ms (ACK bracket, no midpoint assumption)
+post-loss UDP recovery relative to physical-cut bounds: [15.530627, 16.095491] ms
+SID/path attribution not verified in this run; use --capture on the failure pilot.

@@ -1,0 +1,13 @@
+clock=monotonic
+schema_version=2
+status=finished
+start_ns=2020390656311
+end_ns=2046391179690
+t_detect_ns=2026388110592
+t_switched_ns=2026390034861
+t_first_ok_ns=2026390171590
+probes_sent=21392
+replies_received=21388
+switch_count=1
+miss_ms=5.0
+confirm_ms=1.0

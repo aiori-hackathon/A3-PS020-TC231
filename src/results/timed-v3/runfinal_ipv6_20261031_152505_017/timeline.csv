@@ -1,0 +1,3 @@
+event,monotonic_ns,relative_to_cut_request_ms
+cut_request_start,6324051581512,0.0
+cut_ack_observed,6324051877007,0.295495

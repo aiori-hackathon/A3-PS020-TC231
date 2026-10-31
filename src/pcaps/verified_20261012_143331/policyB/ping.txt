@@ -1,0 +1,8 @@
+PING 2001:db8:b::2 (2001:db8:b::2): 56 data bytes
+64 bytes from 2001:db8:b::2: seq=0 ttl=61 time=0.235 ms
+64 bytes from 2001:db8:b::2: seq=1 ttl=61 time=0.217 ms
+64 bytes from 2001:db8:b::2: seq=2 ttl=61 time=0.237 ms
+
+--- 2001:db8:b::2 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.217/0.229/0.237 ms

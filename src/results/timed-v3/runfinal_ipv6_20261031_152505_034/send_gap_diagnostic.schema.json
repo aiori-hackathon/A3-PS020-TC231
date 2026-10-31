@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "measurement": "inter_send_gap",
+  "first_row_valid": false,
+  "wall_boundary": "actual_ns[seq] - actual_ns[seq-1]",
+  "counter_boundary": "successive sequential CPU/rusage reads after actual_ns",
+  "limitation": "CPU/counter boundaries are approximate; zero switches do not prove a VM pause",
+  "instrumentation": "one thread_time_ns and one RUSAGE_THREAD sample per packet"
+}

@@ -1,0 +1,7 @@
+{
+  "policy": "unavailable: errno 38",
+  "priority": "unavailable: errno 38",
+  "affinity": [
+    6
+  ]
+}

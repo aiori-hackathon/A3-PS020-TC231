@@ -1,0 +1,10 @@
+clock=monotonic
+schema_version=3
+sender_revision=timed_v3
+sent=20000
+start_ns=7412527554534
+end_ns=7432528197251
+wall_start_ns=1793462328487792765
+wall_end_ns=1793462348788926497
+max_late_us=1155
+send_errors=0

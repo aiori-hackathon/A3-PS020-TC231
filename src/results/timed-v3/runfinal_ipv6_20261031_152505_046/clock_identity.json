@@ -1,0 +1,22 @@
+{
+  "h1": {
+    "boot_id": "016bcdcb-fb35-483e-a1f1-252031be21ce",
+    "time_offsets": "monotonic           0         0\nboottime            0         0",
+    "monotonic_ns": 7981471314732
+  },
+  "h2": {
+    "boot_id": "016bcdcb-fb35-483e-a1f1-252031be21ce",
+    "time_offsets": "monotonic           0         0\nboottime            0         0",
+    "monotonic_ns": 7981786801816
+  },
+  "r1": {
+    "boot_id": "016bcdcb-fb35-483e-a1f1-252031be21ce",
+    "time_offsets": "monotonic           0         0\nboottime            0         0",
+    "monotonic_ns": 7982075825165
+  },
+  "r2": {
+    "boot_id": "016bcdcb-fb35-483e-a1f1-252031be21ce",
+    "time_offsets": "monotonic           0         0\nboottime            0         0",
+    "monotonic_ns": 7982392434454
+  }
+}
